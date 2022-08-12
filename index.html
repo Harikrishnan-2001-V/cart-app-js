@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cool Stuff Stationary</title>
+	<script src="https://kit.fontawesome.com/f0b4d212f8.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<section class="home-page">
+	<h1>Cool Stuff Stationary</h1>
+	<p>Come on friends and collect everything a nice shop for stationary items</p>
+</section>
+	
+<section class="about-us" id="about-us-page">
+	<div class="top">
+	<div class="internal">
+		<h1>About us</h1>
+		<div class="dash"></div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam dui, faucibus at euismod id, tempor ac magna. Donec viverra sapien ante, nec eleifend lorem rhoncus blandit.</p>
+		<p>Nullam imperdiet at nulla vehicula venenatis. Nulla facilisi. Suspendisse cursus diam massa, id sagittis enim ullamcorper eget. Praesent sem elit, lobortis eget mollis at, ornare vel augue. Integer quis quam mauris. Sed fringilla consectetur leo, in tempus nisi eleifend non.</p>
+	</div>
+
+	<img src="about-us-img.JPG" alt="Cant found the about us image">
+	</div>
+
+	<p class="external clearfix">Donec risus velit, tempus ac purus in, fringilla tincidunt dolor. Praesent eget venenatis urna, quis pretium dui. Sed ante urna, feugiat sit amet ex vel, faucibus sollicitudin urna. Sed vestibulum ultrices finibus. Morbi non tortor scelerisque, tempus justo in, lacinia nisi. Vestibulum eu egestas felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras diam nisi, facilisis nec nulla ut, viverra varius leo. Phasellus condimentum, nibh ut porttitor blandit, tortor eros dictum ligula, eu convallis libero nulla sed tortor.</p>
+</section>
+
+<section class="orders" id="orders-page">
+	<div class="title-bar">
+		<h1>Orders :-</h1>
+		<p>A new place where you can get a quality product for your little one.</p>
+	</div>
+	<div class="dash"></div>
+	<div class="buyer-table">
+	<div class="list-menu">
+		<div class="box">
+			<button type="button" onclick="adder(true,'pencil')">++</button>
+			<p>Pencil</p>
+			<button type="button" onclick="adder(false,'pencil')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'pen')">++</button>
+			<p>Pen</p>
+			<button type="button" onclick="adder(false,'pen')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'eraser')">++</button>
+			<p>Eraser</p>
+			<button type="button" onclick="adder(false,'eraser')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'ink-eraser')">++</button>
+			<p>Ink-eraser</p>
+			<button type="button" onclick="adder(false,'ink-eraser')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'scale')">++</button>
+			<p>Scale</p>
+			<button type="button" onclick="adder(false,'scale')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'blue-ink')">++</button>
+			<p>Blue-ink</p>
+			<button type="button" onclick="adder(false,'blue-ink')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'sharpner')">++</button>
+			<p>Sharpner</p>
+			<button type="button" onclick="adder(false,'sharpner')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'black-ink')">++</button>
+			<p>Black-ink</p>
+			<button type="button" onclick="adder(false,'black-ink')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'crayons')">++</button>
+			<p>Crayons</p>
+			<button type="button" onclick="adder(false,'crayons')">--</button>
+		</div>
+		<div class="box">
+			<button type="button" onclick="adder(true,'marker')">++</button>
+			<p>Marker</p>
+			<button type="button" onclick="adder(false,'marker')">--</button>
+		</div>
+		<div class="box-result">
+			<button type="button" onclick="myFunction()">Click here for bill</button>
+		</div>
+	</div>
+
+	<div class="display-menu">
+		<p id="pencil"></p>
+		<p id="eraser"></p>
+		<p id="scale"></p>
+		<p id="sharpner"></p>
+		<p id="crayons"></p>
+		<p id="pen"></p>
+		<p id="ink-eraser"></p>
+		<p id="blue-ink"></p>
+		<p id="black-ink"></p>
+		<p id="marker"></p>
+		<p id="total"></p>
+		<p id="cash"></p>
+	</div>
+	</div>
+</section>
+
+<section class="testimonial" id="testimonial-page">
+	<div class="title-bar">
+		<h1>Testimonials :-</h1>
+		<p>These are our fantastic customer details along with their wonderful feedbacks.</p>
+	</div>
+	<div class="dash"></div>
+	<div class="members">
+		<div class="content">
+			<div class="content-bg"><img src="empty.jpg" alt="Hari"></div>
+			<h4>Harikrishnan V <br> Full Stack Developer</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam dui, faucibus at euismod id, tempor ac magna. Donec viverra sapien ante, nec eleifend lorem rhoncus blandit.</p>
+		</div>
+		<div class="content">
+			<div class="content-bg"><img src="empty.jpg" alt="Hari"></div>
+			<h4>Harikrishnan V <br> Full Stack Developer</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam dui, faucibus at euismod id, tempor ac magna. Donec viverra sapien ante, nec eleifend lorem rhoncus blandit.</p>
+		</div>
+		<div class="content">
+			<div class="content-bg"><img src="empty.jpg" alt="Hari"></div>
+			<h4>Harikrishnan V <br> Full Stack Developer</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam dui, faucibus at euismod id, tempor ac magna. Donec viverra sapien ante, nec eleifend lorem rhoncus blandit.</p>
+		</div>
+	</div>
+</section>
+
+<section class="cart" id="cart-page">
+	<div class="cart-header">
+		<h1>My Shopping Cart :-</h1>
+		<p>Your valuable orders is at your best prices.</p>
+	</div>
+	<div class="dash"></div>
+	<div class="cart-footer">
+		<p>lorem ipsum dolor sit amet, consectetur</p>
+	</div>
+	<button class="cart-button">Payment Via Online</button>
+</section>
+
+<header>
+	<ul>
+		<a href="#about-us-page"><li>About us</li></a>
+		<a href="#orders-page"><li>Orders</li></a>
+		<a href="#cart-page"><li>MyCart</li></a>
+		<a href="#testimonial-page"><li>Testimonial</li></a>
+		<a href="#contact-us-page"><li>Contact us</li></a>
+	</ul>
+	<a href="#" class="button home">Home</a>
+	<a href="#" class="button log-out">Log-Out</a>
+</header>
+
+<footer id="contact-us-page">
+	<div class="part-1">
+		<div class="page-link">
+			<ul>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Help & Support</a></li>
+				<li><a href="#">iOS App</a></li>
+				<li><a href="#">Android App</a></li>
+			</ul>
+		</div>
+		<div class="out-link">
+			<ul class="social-links">
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="part-2">
+		<p>This webpage has been created for educational purposes by Harikrishnan.<br>
+			You can feel free to use it and customize it to make your own webpages. </p>
+	</div>
+</footer>
+
+<script>
+const items = ["pencil","eraser","scale","sharpner","crayons","pen","ink-eraser","blue-ink","black-ink","marker"];
+const value = [5,2,10,3,25,15,5,20,20,30];
+const products = [];
+
+class Product
+{  
+	name = "";
+	count = 0;
+	value = 0;
+    constructor(name,value)  
+    {  
+      	this.name = name;  
+      	this.value = value;  
+    }
+	
+	increaseCount(){
+		this.count++;
+	}
+	decreaseCount(){
+		this.count--;
+	}
+}  
+
+for(var i=0;i<items.length;i++){
+	products.push(new Product(items[i],value[i]));
+}
+
+function adder(flag,itemName){
+	const product = products.filter((product) => product.name === itemName);
+	if(product[0] !== null){
+		if(flag){
+			product[0].increaseCount();
+		}
+		else{
+			product[0].decreaseCount();
+		}
+	}
+	myFunction();
+}
+
+function getTotal(){
+	let s = 0;
+	for(let i=0;i<items.length;i++)
+	{
+		s += products[i].count;
+	}
+	return s;
+}
+
+function getCash(){
+	let s = 0;
+	for(let i=0;i<items.length;i++)
+	{
+		s += products[i].count*products[i].value;
+	}
+	return s;
+}
+
+function myFunction() {
+	for(let i=0;i<items.length;i++) {
+		if(products[i].count<=0)
+		{
+			products[i].count=0;
+			document.getElementById(products[i].name).innerText = "";
+		}
+		else{
+    		document.getElementById(products[i].name).innerText = "You ordered "+products[i].count+" "+products[i].name;
+		}
+	var total= getTotal();
+	var cash= getCash();
+	if(total!==0){
+		document.getElementById("total").innerText = "You total order is "+total+" items.";
+		document.getElementById("cash").innerText = "Total cash need to pay is "+cash+".";
+	}
+	else{
+		document.getElementById("total").innerText = "";
+		document.getElementById("cash").innerText = "";
+	}
+  }
+}
+</script>
+
+</body>
+</html>
