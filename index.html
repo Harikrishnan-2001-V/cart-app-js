@@ -86,7 +86,7 @@
 			<button type="button" onclick="adder(false,'marker')">--</button>
 		</div>
 		<div class="box-result">
-			<button type="button" onclick="myFunction()">Click here for bill</button>
+			<button type="button" onclick="Creation()">Add to Cart</button>
 		</div>
 	</div>
 
@@ -138,8 +138,8 @@
 		<p>Your valuable orders is at your best prices.</p>
 	</div>
 	<div class="dash"></div>
-	<div class="cart-footer">
-		<p>lorem ipsum dolor sit amet, consectetur</p>
+	<div class="cart-footer" id="Cart-folder">
+		
 	</div>
 	<button class="cart-button">Payment Via Online</button>
 </section>
@@ -264,6 +264,37 @@ function myFunction() {
 	}
   }
 }
+
+var index = 1;
+function Creation(){
+	var total_cost = 0;
+	let folder = document.createElement("div");
+	folder.classList.add("contents");
+	var para = document.createElement("p")
+	var text = document.createTextNode("Order no - "+index);
+	para.appendChild(text);
+	folder.appendChild(para);
+
+	for(let i=0;i<items.length;i++){
+		if(products[i].count !==0 ){
+			var para = document.createElement("p");
+			var text = document.createTextNode(products[i].name+" -> "+products[i].count);
+			total_cost+=products[i].count*products[i].value;
+			para.appendChild(text);
+			folder.appendChild(para);
+			products[i].count=0;
+		}
+	}
+	var para = document.createElement("p")
+	var text = document.createTextNode("Total is "+total_cost);
+	para.appendChild(text);
+	folder.appendChild(para);
+	
+   	var element = document.getElementById("Cart-folder");
+   	element.appendChild(folder);
+	index++;
+}
+
 </script>
 
 </body>
