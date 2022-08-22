@@ -3,6 +3,7 @@
 <head>
 	<title>Cool Stuff Stationary</title>
 	<script src="https://kit.fontawesome.com/f0b4d212f8.js" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -114,20 +115,61 @@
 	</div>
 	<div class="dash"></div>
 	<div class="members">
-		<div class="content">
-			<div class="content-bg"><img src="empty.jpg" alt="Hari"></div>
-			<h4>Harikrishnan V <br> Full Stack Developer</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam dui, faucibus at euismod id, tempor ac magna. Donec viverra sapien ante, nec eleifend lorem rhoncus blandit.</p>
+		<div class="row">
+			<div class="column container" onclick="openTab('b1');">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+  				<div class="overlay">My Name is John</div>
+			</div>
+			<div class="column container" onclick="openTab('b2');">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+  				<div class="overlay">My Name is Brick</div>
+			</div>
+			<div class="column container" onclick="openTab('b3');">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+  				<div class="overlay">My Name is James</div>
+			</div>
+			<div class="column container" onclick="openTab('b4');">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+				<div class="overlay">My Name is David</div>
+			</div>
 		</div>
-		<div class="content">
-			<div class="content-bg"><img src="empty.jpg" alt="Hari"></div>
-			<h4>Harikrishnan V <br> Full Stack Developer</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam dui, faucibus at euismod id, tempor ac magna. Donec viverra sapien ante, nec eleifend lorem rhoncus blandit.</p>
+		
+		<br>
+		
+		<div id="b1" class="containerTab" style="display:none;background:purple">
+			<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+			<div class="contents-of-person">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+				<h2>Box 1</h2>
+				<p>Lorem ipsum..</p>
+			</div>
 		</div>
-		<div class="content">
-			<div class="content-bg"><img src="empty.jpg" alt="Hari"></div>
-			<h4>Harikrishnan V <br> Full Stack Developer</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam dui, faucibus at euismod id, tempor ac magna. Donec viverra sapien ante, nec eleifend lorem rhoncus blandit.</p>
+		
+		<div id="b2" class="containerTab" style="display:none;background:green">
+			<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+			<div class="contents-of-person">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+				<h2>Box 1</h2>
+				<p>Lorem ipsum..</p>
+			</div>
+		</div>
+
+		<div id="b3" class="containerTab" style="display:none;background:blue">
+			<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+			<div class="contents-of-person">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+				<h2>Box 1</h2>
+				<p>Lorem ipsum..</p>
+			</div>
+		</div>
+		  
+		<div id="b4" class="containerTab" style="display:none;background:red">
+			<span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+			<div class="contents-of-person">
+				<img src="img_avatar.png" alt="Avatar" class="image">
+				<h2>Box 1</h2>
+				<p>Lorem ipsum..</p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -182,120 +224,6 @@
 			You can feel free to use it and customize it to make your own webpages. </p>
 	</div>
 </footer>
-
-<script>
-const items = ["pencil","eraser","scale","sharpner","crayons","pen","ink-eraser","blue-ink","black-ink","marker"];
-const value = [5,2,10,3,25,15,5,20,20,30];
-const products = [];
-
-class Product
-{  
-	name = "";
-	count = 0;
-	value = 0;
-    constructor(name,value)  
-    {  
-      	this.name = name;  
-      	this.value = value;  
-    }
-	
-	increaseCount(){
-		this.count++;
-	}
-	decreaseCount(){
-		this.count--;
-	}
-}  
-
-for(var i=0;i<items.length;i++){
-	products.push(new Product(items[i],value[i]));
-}
-
-function adder(flag,itemName){
-	const product = products.filter((product) => product.name === itemName);
-	if(product[0] !== null){
-		if(flag){
-			product[0].increaseCount();
-		}
-		else{
-			product[0].decreaseCount();
-		}
-	}
-	myFunction();
-}
-
-function getTotal(){
-	let s = 0;
-	for(let i=0;i<items.length;i++)
-	{
-		s += products[i].count;
-	}
-	return s;
-}
-
-function getCash(){
-	let s = 0;
-	for(let i=0;i<items.length;i++)
-	{
-		s += products[i].count*products[i].value;
-	}
-	return s;
-}
-
-function myFunction() {
-	for(let i=0;i<items.length;i++) {
-		if(products[i].count<=0)
-		{
-			products[i].count=0;
-			document.getElementById(products[i].name).innerText = "";
-		}
-		else{
-    		document.getElementById(products[i].name).innerText = "You ordered "+products[i].count+" "+products[i].name;
-		}
-	var total= getTotal();
-	var cash= getCash();
-	if(total!==0){
-		document.getElementById("total").innerText = "You total order is "+total+" items.";
-		document.getElementById("cash").innerText = "Total cash need to pay is "+cash+".";
-	}
-	else{
-		document.getElementById("total").innerText = "";
-		document.getElementById("cash").innerText = "";
-	}
-  }
-}
-
-var index = 1;
-function Creation(){
-	var total_cost = 0;
-	let folder = document.createElement("div");
-	folder.classList.add("contents");
-	var para = document.createElement("p")
-	var text = document.createTextNode("Order no - "+index);
-	para.appendChild(text);
-	folder.appendChild(para);
-
-	for(let i=0;i<items.length;i++){
-		if(products[i].count !==0 ){
-			var para = document.createElement("p");
-			var text = document.createTextNode(products[i].name+" -> "+products[i].count);
-			total_cost+=products[i].count*products[i].value;
-			para.appendChild(text);
-			folder.appendChild(para);
-			products[i].count=0;
-		}
-	}
-	var para = document.createElement("p")
-	var text = document.createTextNode("Total is "+total_cost);
-	para.appendChild(text);
-	folder.appendChild(para);
-	
-   	var element = document.getElementById("Cart-folder");
-   	element.appendChild(folder);
-	index++;
-}
-
-</script>
 
 </body>
 </html>
