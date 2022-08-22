@@ -313,16 +313,17 @@ header .log-out{
 	color: white;
 }
 
-.testimonial .members .containerTab .contents-of-person .image{
-	width:150px;
+.testimonial .members .containerTab .contents-of-person{
 	position: relative;
+	display:flex;
 }
 
-.testimonial .members .containerTab .contents-of-person h2,
-.testimonial .members .containerTab .contents-of-person p{
-	position: relative;
-	left:18%;
-	transform: translate(0,-100 px);
+.testimonial .members .containerTab .contents-of-person .image{
+	width:150px;
+}
+
+.testimonial .members .containerTab .contents-of-person .Text-box{
+	margin:10px;
 }
 
 .testimonial .members .row .container {
